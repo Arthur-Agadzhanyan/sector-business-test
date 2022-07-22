@@ -7,7 +7,6 @@ function Pagination({total,currentPage}) {
 
     const renderLinks = ()=>{
         const links = []
-        console.log(currentPage)
 
         for (let i = 0; i < totalPages; i++) {
             links.push(i+1)

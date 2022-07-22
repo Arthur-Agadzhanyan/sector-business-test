@@ -19,3 +19,36 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+
+.col_id{
+  justify-content: center;
+  max-width: 10%;
+}
+.col_title{
+  max-width: 65%;
+}
+.col_body{
+  max-width: 35%;
+}
+
+@media screen and (max-width:900px) {
+  .col_title{
+    max-width: 40%;
+  }
+  .col_body{
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container{
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container{
+    padding: 0px 20px;
+    min-width: 100vw;
+  }
+}

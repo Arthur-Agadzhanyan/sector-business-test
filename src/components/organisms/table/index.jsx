@@ -15,7 +15,6 @@ export function Table({posts,searchingWord=""}) {
 
     useEffect(()=>{
         if(posts.length){
-            console.log(posts)
             const filtered = posts.filter((el)=>{
                 return searchBy(el.id,searchingWord) || searchBy(el.title,searchingWord) || searchBy(el.body,searchingWord)
             })
@@ -55,20 +54,20 @@ export function Table({posts,searchingWord=""}) {
     }
 
     return (
-        <>
+        <div className={styles.table_wrapper}>
             <div className={styles.table}>
                 <div className={styles.table__head}>
-                    <TableColumn className={`${styles.head__column} ${styles.col_id}`}>
+                    <TableColumn className={`${styles.head__column} col_id`}>
                         <span onClick={()=>sortPosts("id")}>ID</span>
                         <ArrowBtn className={styles.column__btn} active={sorting.id} onClick={()=>sortPosts("id")}/>
                     </TableColumn>
 
-                    <TableColumn className={`${styles.head__column} ${styles.col_title}`}>
+                    <TableColumn className={`${styles.head__column} col_title`}>
                         <span onClick={()=>sortPosts("title")}>Заголовок</span>
                         <ArrowBtn className={styles.column__btn} active={sorting.title} onClick={()=>sortPosts("title")}/>
                     </TableColumn>
 
-                    <TableColumn className={`${styles.head__column} ${styles.col_body}`}>
+                    <TableColumn className={`${styles.head__column} col_body`}>
                         <span onClick={()=>sortPosts("body")}>Описание</span>
                         <ArrowBtn className={styles.column__btn} active={sorting.body} onClick={()=>sortPosts("body")}/>
                     </TableColumn>
@@ -78,6 +77,6 @@ export function Table({posts,searchingWord=""}) {
                     <TableRow key={post.id} postInfo={post}/>
                 ))}
             </div>
-        </>
+        </div>
     );
 }

@@ -2,8 +2,10 @@
 @import '@styles/variables.scss';
 
 
+.table_wrapper{}
 
 .table{
+  width: 100%;
   .table__head{
     display: flex;
     box-shadow: 0px 4px 27px rgba(230, 231, 234, 0.78);
@@ -24,15 +26,15 @@
         margin-left: 40px;
       }
     }
+  }
+}
 
-    .col_id{
-      max-width: 10%;
-    }
-    .col_title{
-      max-width: 65%;
-    }
-    .col_body{
-      max-width: 35%;
-    }
+@media screen and (max-width: 500px) {
+  .table_wrapper{
+    overflow-x: auto;
+    margin-right: -20px;
+  }
+  .table{
+    min-width: 150vw;
   }
 }
