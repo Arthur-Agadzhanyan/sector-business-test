@@ -1,0 +1,38 @@
+@import '@styles/mixins.scss';
+@import '@styles/variables.scss';
+
+
+
+.table{
+  .table__head{
+    display: flex;
+    box-shadow: 0px 4px 27px rgba(230, 231, 234, 0.78);
+    background: $grey-1;
+    .head__column{
+      width: 100%;
+      justify-content: center;
+      border-color: $grey-1;
+
+      display: flex;
+
+      span{
+        @include text(#fff,14px,500);
+        cursor: pointer;
+      }
+
+      .column__btn{
+        margin-left: 40px;
+      }
+    }
+
+    .col_id{
+      max-width: 10%;
+    }
+    .col_title{
+      max-width: 65%;
+    }
+    .col_body{
+      max-width: 35%;
+    }
+  }
+}

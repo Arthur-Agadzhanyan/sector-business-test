@@ -1,0 +1,35 @@
+@import '@styles/mixins.scss';
+@import '@styles/variables.scss';
+
+.search_block{
+  max-width: 630px;
+  display: flex;
+  background: $grey-2;
+
+  .block__btn,.block__input{
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+
+  .block__input{
+    flex-grow: 1;
+    padding: 17px 26px;
+    padding-right: 0px;
+    @include text(#fff,14px,400);
+
+    &::placeholder{
+      color: #B3B7BF;
+    }
+  }
+
+  .block__btn{
+    padding: 16px 24px;
+    cursor: pointer;
+    transition: all .2s linear;
+
+    &:hover{
+      background: rgba(#000,.2);
+    }
+  }
+}

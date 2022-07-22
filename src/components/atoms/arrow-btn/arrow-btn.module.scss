@@ -1,0 +1,11 @@
+.arrow_btn{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all .2s linear;
+
+  &-active{
+    transform: rotate(180deg);
+    margin-bottom: -3px;
+  }
+}

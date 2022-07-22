@@ -1,0 +1,6 @@
+@import '@styles/mixins.scss';
+@import '@styles/variables.scss';
+
+.text{
+  @include text($grey-1,13px,500,140%);
+}
